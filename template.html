@@ -377,7 +377,11 @@
                   <ol style="counter-reset:my-ol-counter {{ data['refereed journal articles']|length + 1 }}">
                   {% for p in data['refereed journal articles'] %}
                     <li>
+                      {% if p['url'] %}
+                      <a href="{{ p['url'] }}"><span class="title">{{ p['title'] }}</span></a>
+                      {% else %}
                       <span class="title">{{ p['title'] }}</span>
+                      {% endif %}
                       <br>
                       {% if p['authors']|length >= 2 %}
                       {{ ', '.join(p['authors'][:-1]) }}, {{ p['authors'][-1] }}
@@ -404,7 +408,11 @@
                   <ol style="counter-reset:my-ol-counter {{ data['refereed conference papers']|length + 1 }}">
                   {% for p in data['refereed conference papers'] %}
                     <li>
+                      {% if p['url'] %}
+                      <a href="{{ p['url'] }}"><span class="title">{{ p['title'] }}</span></a>
+                      {% else %}
                       <span class="title">{{ p['title'] }}</span>
+                      {% endif %}
                       <br>
                       {% if p['authors']|length >= 2 %}
                       {{ ', '.join(p['authors'][:-1]) }}, {{ p['authors'][-1] }}
@@ -431,7 +439,11 @@
                   <ol style="counter-reset:my-ol-counter {{ data['refereed workshop papers']|length + 1 }}">
                   {% for p in data['refereed workshop papers'] %}
                     <li>
+                      {% if p['url'] %}
+                      <a href="{{ p['url'] }}"><span class="title">{{ p['title'] }}</span></a>
+                      {% else %}
                       <span class="title">{{ p['title'] }}</span>
+                      {% endif %}
                       <br>
                       {% if p['authors']|length >= 2 %}
                       {{ ', '.join(p['authors'][:-1]) }}, {{ p['authors'][-1] }}
