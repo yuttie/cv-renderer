@@ -445,6 +445,7 @@
               {% else %}
               {{ p['authors'][0] }}
               {% endif %}
+              {% if p['proceedings'] %}
               <br>
               {% if p['proceedings']['name'] %}
               In {{ p['proceedings']['name'] }}{% if p['workshop']['abbrev'] %} ({{ p['workshop']['abbrev'] }}){% endif %},
@@ -457,6 +458,7 @@
               p.{{ p['page'] }},
               {% endif %}
               {{ p['proceedings']['year']}}.
+              {% endif %}
           {% endfor %}
           </ol>
         </section>
