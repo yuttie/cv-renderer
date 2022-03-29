@@ -12,7 +12,7 @@ env = Environment(loader=FileSystemLoader('.'))
 env.filters['regex_sub'] = regex_sub
 template = env.get_template('template.html')
 
-with open('me.yaml', 'r') as f:
+with open('cv.yaml', 'r') as f:
     data = yaml.load(f, Loader=yaml.FullLoader)
 
 data['research grants'].sort(key=lambda x: (x['from']['year'], x['from']['month'], x['from']['day']), reverse=True)
