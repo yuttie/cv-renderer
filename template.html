@@ -372,8 +372,8 @@
           <ol style="counter-reset:my-ol-counter {{ data['refereed journal articles']|length + 1 }}">
           {% for p in data['refereed journal articles'] %}
             <li>
-              {% if p['url'] %}
-              <a href="{{ p['url'] }}"><span class="title">{{ p['title'] }}</span></a>
+              {% if p['doi'] %}
+              <a href="https://doi.org/{{ p['doi'] }}"><span class="title">{{ p['title'] }}</span></a>
               {% else %}
               <span class="title">{{ p['title'] }}</span>
               {% endif %}
