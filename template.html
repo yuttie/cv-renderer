@@ -243,26 +243,65 @@
       font-family: 'Noto Sans JP', sans-serif;
       font-weight: 300
     }
+
+    input#japanese {
+      display: none;
+    }
+
+    #lang-toggler {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 10;
+    }
+    #lang-toggler::before {
+      content: "Switch to Japanese";
+    }
+    input#japanese:checked + #lang-toggler::before {
+      content: "Switch to English";
+    }
+
+    .ja {
+      display: none;
+    }
+
+    input#japanese:checked ~ section .en {
+      display: none;
+    }
+    input#japanese:checked ~ section .ja {
+      display: unset;
+    }
   </style>
 </head>
 
 <body>
+  <input type="checkbox" id="japanese">
+  <label id="lang-toggler" for="japanese"></label>
+
   <section class="container">
     <div class="profile">
       <div class="head-shot"></div>
       <div class="contact-container">
         <div class="contact">
-          <h1 class="name">{{ data['basic']['fullname_ja'] }}</h1>
+          <h1 class="name">
+            <span class="en">{{ data['basic']['fullname_en'] }}</span>
+            <span class="ja">{{ data['basic']['fullname_ja'] }}</span>
+          </h1>
           <div class="affiliation">
             <div><i class="material-icons">business</i>
               <div>
-                {{ data['basic']['affiliation_ja'] }}
+                <span class="en">{{ data['basic']['affiliation_en'] }}</span>
+                <span class="ja">{{ data['basic']['affiliation_ja'] }}</span>
                 <br>
-                {{ data['basic']['affiliation_sub_ja'] }} {{ data['basic']['title_ja'] }}
+                <span class="en">{{ data['basic']['affiliation_sub_en'] }} {{ data['basic']['title_en'] }}</span>
+                <span class="ja">{{ data['basic']['affiliation_sub_ja'] }} {{ data['basic']['title_ja'] }}</span>
               </div>
             </div>
             <div><i class="material-icons">school</i>
-              <div>{{ data['basic']['degree_ja'] }}</div>
+              <div>
+                <span class="en">{{ data['basic']['degree_en'] }}</span>
+                <span class="ja">{{ data['basic']['degree_ja'] }}</span>
+              </div>
             </div>
             <div><i class="material-icons">email</i><span class="email">{{ data['basic']['email'].split('@')[0] }}<span class="at"></span>{{ data['basic']['email'].split('@')[1] }}</span></div>
           </div>
