@@ -351,7 +351,11 @@
           <ol style="counter-reset:my-ol-counter {{ data['refereed book chapters']|length + 1 }}">
           {% for p in data['refereed book chapters'] %}
             <li>
+              {% if p['doi'] %}
+              <a href="https://doi.org/{{ p['doi'] }}"><span class="title">{{ p['title'] }}</span></a>
+              {% else %}
               <span class="title">{{ p['title'] }}</span>
+              {% endif %}
               <br>
               {% if p['authors']|length >= 2 %}
               {{ ', '.join(p['authors'][:-1]) }}, and {{ p['authors'][-1] }}
