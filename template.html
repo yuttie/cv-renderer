@@ -310,9 +310,15 @@
     </div>
     <div class="cv-container">
       <section>
-        <h1>研究費獲得状況</h1>
+        <h1>
+          <span class="en">Grants</span>
+          <span class="ja">研究費獲得状況</span>
+        </h1>
         <section>
-          <h1>研究代表者</h1>
+          <h1>
+            <span class="en">As Principal Investigator</span>
+            <span class="ja">研究代表者</span>
+          </h1>
           <ul>
           {% for grant in data['research grants'] %}
           {% if grant['principal investigator'] == '谷口 雄太' %}
@@ -326,7 +332,10 @@
           </ul>
         </section>
         <section>
-          <h1>研究分担者</h1>
+          <h1>
+            <span class="en">As Co-Investigator</span>
+            <span class="ja">研究分担者</span>
+          </h1>
           <ul>
           {% for grant in data['research grants'] %}
           {% if grant['principal investigator'] != '谷口 雄太' %}
