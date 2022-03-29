@@ -350,7 +350,10 @@
           </section>
         </section>
         <section>
-          <h1>学歴</h1>
+          <h1>
+            <span class="en">Education</span>
+            <span class="ja">学歴</span>
+          </h1>
           <ul>
           {% for edu in data['educational background'] %}
           {% if edu['type'] != 'junior high school' %}
@@ -363,7 +366,10 @@
           </ul>
         </section>
         <section>
-          <h1>学位</h1>
+          <h1>
+            <span class="en">Academic Degrees</span>
+            <span class="ja">学位</span>
+          </h1>
           <ul>
           {% for degree in data['academic degrees'] %}
             <li>
@@ -374,7 +380,10 @@
           </ul>
         </section>
         <section>
-          <h1>職歴</h1>
+          <h1>
+            <span class="en">Professional Background</span>
+            <span class="ja">職歴</span>
+          </h1>
           <ul>
           {% for job in data['professional experiences'] %}
             <li>
@@ -513,7 +522,10 @@
             </ol>
           </section>
           <section>
-            <h1>特許</h1>
+            <h1>
+              <span class="en">Patents</span>
+              <span class="ja">特許</span>
+            </h1>
             <ol style="counter-reset:my-ol-counter {{ data['patents']|length + 1 }}">
             {% for p in data['patents'] %}
               <li>
@@ -540,7 +552,10 @@
             </ol>
           </section>
           <section>
-            <h1>査読無しワークショップ論文</h1>
+            <h1>
+              <span class="en">Unrefereed Workshop Papers</span>
+              <span class="ja">査読無しワークショップ論文</span>
+            </h1>
             <ol style="counter-reset:my-ol-counter {{ data['workshop papers']|length + 1 }}">
             {% for p in data['workshop papers'] %}
               <li>
@@ -567,7 +582,10 @@
             </ol>
           </section>
           <section>
-            <h1>国内発表</h1>
+            <h1>
+              <span class="en">Domestic Presentations</span>
+              <span class="ja">国内発表</span>
+            </h1>
             <ol style="counter-reset:my-ol-counter {{ data['domestic presentations']|length + 1 }}">
             {% for p in data['domestic presentations'] %}
               <li>
@@ -585,7 +603,10 @@
           </section>
         </section>
         <section>
-          <h1>受賞</h1>
+          <h1>
+            <span class="en">Awards</span>
+            <span class="ja">受賞</span>
+          </h1>
           <ol style="counter-reset:my-ol-counter {{ data['awards']|length + 1 }}">
             {% for p in data['awards'] %}
               <li>
@@ -602,7 +623,11 @@
           </ol>
         </section>
         <section>
-          <h1>教育</h1>
+          <h1></h1>
+          <h1>
+            <span class="en">Teaching Experiences</span>
+            <span class="ja">教育</span>
+          </h1>
           <ol style="counter-reset:my-ol-counter {{ data['teaching experiences']|length + 1 }}">
             {% for p in data['teaching experiences'] %}
               {% if p['type'] != '担当' and p['type'] != '代講' %}
