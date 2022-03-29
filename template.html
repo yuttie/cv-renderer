@@ -1,625 +1,625 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width,initial-scale=1" name="viewport">
-  <meta content="{{ data['basic']['fullname_ja'] }}" name="description">
-  <title>{{ data['basic']['fullname_ja'] }}</title>
-  <link href="/favicon.ico" rel="icon" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,700&display=swap&subset=japanese" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <style>
-    .material-icons {
-      font-family: 'Material Icons';
-      font-weight: 400;
-      font-style: normal;
-      font-size: 24px;
-      display: inline-block;
-      line-height: 1;
-      text-transform: none;
-      letter-spacing: normal;
-      word-wrap: normal;
-      white-space: nowrap;
-      direction: ltr;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-      -moz-osx-font-smoothing: grayscale;
-      -webkit-font-feature-settings: 'liga';
-      font-feature-settings: 'liga'
-    }
-  </style>
-  <style>
-    html {
-      font-size: 16px;
-      word-spacing: 1px;
-      -ms-text-size-adjust: 100%;
-      -webkit-text-size-adjust: 100%;
-      -moz-osx-font-smoothing: grayscale;
-      -webkit-font-smoothing: antialiased;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      color: #394f6f;
-      background: #f4f5f6
-    }
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="{{ data['basic']['fullname_ja'] }}" name="description">
+    <title>{{ data['basic']['fullname_ja'] }}</title>
+    <link href="/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,700&display=swap&subset=japanese" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+      .material-icons {
+        font-family: 'Material Icons';
+        font-weight: 400;
+        font-style: normal;
+        font-size: 24px;
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-feature-settings: 'liga';
+        font-feature-settings: 'liga'
+      }
+    </style>
+    <style>
+      html {
+        font-size: 16px;
+        word-spacing: 1px;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        color: #394f6f;
+        background: #f4f5f6
+      }
 
-    h1,
-    html {
-      font-family: 'Noto Sans JP', sans-serif;
-      font-weight: 300
-    }
+      h1,
+      html {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 300
+      }
 
-    *,
-    :after,
-    :before {
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      margin: 0
-    }
+      *,
+      :after,
+      :before {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0
+      }
 
-    a {
-      color: inherit
-    }
+      a {
+        color: inherit
+      }
 
-    a,
-    a:hover {
-      text-decoration: underline
-    }
+      a,
+      a:hover {
+        text-decoration: underline
+      }
 
-    a:hover {
-      color: #0047b3
-    }
+      a:hover {
+        color: #0047b3
+      }
 
-    a::after {
-      font-family: 'Material Icons';
-      content: 'link';
-    }
+      a::after {
+        font-family: 'Material Icons';
+        content: 'link';
+      }
 
-    .email {
-      font-family: monospace
-    }
+      .email {
+        font-family: monospace
+      }
 
-    .material-icons {
-      vertical-align: text-top
-    }
-  </style>
-  <style>
-    .container {
-      min-height: 100vh;
-      width: 80vw;
-      margin: 0 auto;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      text-align: center;
-      background: #f4f5f6
-    }
+      .material-icons {
+        vertical-align: text-top
+      }
+    </style>
+    <style>
+      .container {
+        min-height: 100vh;
+        width: 80vw;
+        margin: 0 auto;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        text-align: center;
+        background: #f4f5f6
+      }
 
-    .container,
-    .profile {
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center
-    }
-
-    .profile {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      margin: 3em auto
-    }
-
-    @media only screen and (min-width:46em) {
+      .container,
       .profile {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center
+      }
+
+      .profile {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        margin: 3em auto
+      }
+
+      @media only screen and (min-width:46em) {
+        .profile {
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+          flex-direction: row
+        }
+      }
+
+      .contact-container {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 0px;
+        flex: 1 1 0;
+        padding: 0 2em
+      }
+
+      .cv-container {
+        text-align: justify
+      }
+    </style>
+    <style>
+      .head-shot {
+        width: 10em;
+        height: 10em;
+        background-image: url(/head-shot.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        border-radius: 50%
+      }
+    </style>
+    <style>
+      .contact {
+        text-align: left
+      }
+
+      .name {
+        font-size: 2em;
+        border-bottom: 1px solid #000
+      }
+
+      .email .at:before {
+        content: '@';
+      }
+
+      .affiliation>div {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
         -ms-flex-direction: row;
-        flex-direction: row
+        flex-direction: row;
+        margin-top: .3em
       }
-    }
 
-    .contact-container {
-      -webkit-box-flex: 1;
-      -ms-flex: 1 1 0px;
-      flex: 1 1 0;
-      padding: 0 2em
-    }
+      .affiliation>div>i {
+        margin-right: .3em
+      }
+    </style>
+    <style>
+      .title {
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 700;
+      }
 
-    .cv-container {
-      text-align: justify
-    }
-  </style>
-  <style>
-    .head-shot {
-      width: 10em;
-      height: 10em;
-      background-image: url(/head-shot.jpg);
-      background-size: contain;
-      background-repeat: no-repeat;
-      border-radius: 50%
-    }
-  </style>
-  <style>
-    .contact {
-      text-align: left
-    }
+      section {
+        margin: 2em 0
+      }
 
-    .name {
-      font-size: 2em;
-      border-bottom: 1px solid #000
-    }
+      section>h1 {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        background: #f4f5f6;
+        height: 32px;
+        height: 2rem;
+        line-height: 32px;
+        line-height: 2rem;
+        z-index: 2;
+      }
 
-    .email .at:before {
-      content: '@';
-    }
+      section>section>h1 {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 2em;
+        background: #f4f5f6;
+        z-index: 1
+      }
 
-    .affiliation>div {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-      flex-direction: row;
-      margin-top: .3em
-    }
+      ol {
+        list-style: none;
+        padding-left: 56px;
+        padding-left: 3.5rem
+      }
 
-    .affiliation>div>i {
-      margin-right: .3em
-    }
-  </style>
-  <style>
-    .title {
-      font-family: 'Noto Sans JP', sans-serif;
-      font-weight: 700;
-    }
+      ol>li {
+        counter-increment: my-ol-counter -1;
+        margin: .6em 0
+      }
 
-    section {
-      margin: 2em 0
-    }
+      ol>li:hover {
+        text-shadow: 0 0 .16px rgba(57, 79, 111, .5);
+        text-shadow: 0 0 .01rem rgba(57, 79, 111, .5)
+      }
 
-    section>h1 {
-      position: -webkit-sticky;
-      position: sticky;
-      top: 0;
-      background: #f4f5f6;
-      height: 32px;
-      height: 2rem;
-      line-height: 32px;
-      line-height: 2rem;
-      z-index: 2;
-    }
+      ol>li:hover:before {
+        color: #f4f5f6;
+        background: #394f6f
+      }
 
-    section>section>h1 {
-      position: -webkit-sticky;
-      position: sticky;
-      top: 2em;
-      background: #f4f5f6;
-      z-index: 1
-    }
+      ol>li:before {
+        content: counter(my-ol-counter);
+        display: inline-block;
+        position: absolute;
+        width: 48px;
+        width: 3rem;
+        height: 48px;
+        height: 3rem;
+        margin-left: -56px;
+        margin-left: -3.5rem;
+        text-align: center;
+        color: rgba(57, 79, 111, .5);
+        line-height: 48px;
+        line-height: 3rem;
+        font-size: 36.8px;
+        font-size: 2.3rem;
+        border: 1px solid rgba(57, 79, 111, .1);
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 300
+      }
 
-    ol {
-      list-style: none;
-      padding-left: 56px;
-      padding-left: 3.5rem
-    }
+      input#japanese {
+        display: none;
+      }
 
-    ol>li {
-      counter-increment: my-ol-counter -1;
-      margin: .6em 0
-    }
+      #lang-toggler {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 10;
+      }
+      #lang-toggler::before {
+        content: "Switch to Japanese";
+      }
+      input#japanese:checked + #lang-toggler::before {
+        content: "Switch to English";
+      }
 
-    ol>li:hover {
-      text-shadow: 0 0 .16px rgba(57, 79, 111, .5);
-      text-shadow: 0 0 .01rem rgba(57, 79, 111, .5)
-    }
+      .ja {
+        display: none;
+      }
 
-    ol>li:hover:before {
-      color: #f4f5f6;
-      background: #394f6f
-    }
+      input#japanese:checked ~ section .en {
+        display: none;
+      }
+      input#japanese:checked ~ section .ja {
+        display: unset;
+      }
+    </style>
+  </head>
 
-    ol>li:before {
-      content: counter(my-ol-counter);
-      display: inline-block;
-      position: absolute;
-      width: 48px;
-      width: 3rem;
-      height: 48px;
-      height: 3rem;
-      margin-left: -56px;
-      margin-left: -3.5rem;
-      text-align: center;
-      color: rgba(57, 79, 111, .5);
-      line-height: 48px;
-      line-height: 3rem;
-      font-size: 36.8px;
-      font-size: 2.3rem;
-      border: 1px solid rgba(57, 79, 111, .1);
-      font-family: 'Noto Sans JP', sans-serif;
-      font-weight: 300
-    }
+  <body>
+    <input type="checkbox" id="japanese">
+    <label id="lang-toggler" for="japanese"></label>
 
-    input#japanese {
-      display: none;
-    }
-
-    #lang-toggler {
-      position: fixed;
-      top: 0;
-      right: 0;
-      z-index: 10;
-    }
-    #lang-toggler::before {
-      content: "Switch to Japanese";
-    }
-    input#japanese:checked + #lang-toggler::before {
-      content: "Switch to English";
-    }
-
-    .ja {
-      display: none;
-    }
-
-    input#japanese:checked ~ section .en {
-      display: none;
-    }
-    input#japanese:checked ~ section .ja {
-      display: unset;
-    }
-  </style>
-</head>
-
-<body>
-  <input type="checkbox" id="japanese">
-  <label id="lang-toggler" for="japanese"></label>
-
-  <section class="container">
-    <div class="profile">
-      <div class="head-shot"></div>
-      <div class="contact-container">
-        <div class="contact">
-          <h1 class="name">
-            <span class="en">{{ data['basic']['fullname_en'] }}</span>
-            <span class="ja">{{ data['basic']['fullname_ja'] }}</span>
-          </h1>
-          <div class="affiliation">
-            <div><i class="material-icons">business</i>
-              <div>
-                <span class="en">{{ data['basic']['affiliation_en'] }}</span>
-                <span class="ja">{{ data['basic']['affiliation_ja'] }}</span>
-                <br>
-                <span class="en">{{ data['basic']['affiliation_sub_en'] }} {{ data['basic']['title_en'] }}</span>
-                <span class="ja">{{ data['basic']['affiliation_sub_ja'] }} {{ data['basic']['title_ja'] }}</span>
+    <section class="container">
+      <div class="profile">
+        <div class="head-shot"></div>
+        <div class="contact-container">
+          <div class="contact">
+            <h1 class="name">
+              <span class="en">{{ data['basic']['fullname_en'] }}</span>
+              <span class="ja">{{ data['basic']['fullname_ja'] }}</span>
+            </h1>
+            <div class="affiliation">
+              <div><i class="material-icons">business</i>
+                <div>
+                  <span class="en">{{ data['basic']['affiliation_en'] }}</span>
+                  <span class="ja">{{ data['basic']['affiliation_ja'] }}</span>
+                  <br>
+                  <span class="en">{{ data['basic']['affiliation_sub_en'] }} {{ data['basic']['title_en'] }}</span>
+                  <span class="ja">{{ data['basic']['affiliation_sub_ja'] }} {{ data['basic']['title_ja'] }}</span>
+                </div>
               </div>
-            </div>
-            <div><i class="material-icons">school</i>
-              <div>
-                <span class="en">{{ data['basic']['degree_en'] }}</span>
-                <span class="ja">{{ data['basic']['degree_ja'] }}</span>
+              <div><i class="material-icons">school</i>
+                <div>
+                  <span class="en">{{ data['basic']['degree_en'] }}</span>
+                  <span class="ja">{{ data['basic']['degree_ja'] }}</span>
+                </div>
               </div>
+              <div><i class="material-icons">email</i><span class="email">{{ data['basic']['email'].split('@')[0] }}<span class="at"></span>{{ data['basic']['email'].split('@')[1] }}</span></div>
             </div>
-            <div><i class="material-icons">email</i><span class="email">{{ data['basic']['email'].split('@')[0] }}<span class="at"></span>{{ data['basic']['email'].split('@')[1] }}</span></div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="cv-container">
-      <section>
-        <h1>
-          <span class="en">Grants</span>
-          <span class="ja">研究費獲得状況</span>
-        </h1>
+      <div class="cv-container">
         <section>
           <h1>
-            <span class="en">As Principal Investigator</span>
-            <span class="ja">研究代表者</span>
+            <span class="en">Grants</span>
+            <span class="ja">研究費獲得状況</span>
           </h1>
+          <section>
+            <h1>
+              <span class="en">As Principal Investigator</span>
+              <span class="ja">研究代表者</span>
+            </h1>
+            <ul>
+            {% for grant in data['research grants'] %}
+            {% if grant['principal investigator'] == '谷口 雄太' %}
+              <li>
+                <a href="{{ grant['url'] }}"><span class="title">{{ grant['title'] }}</span></a><br>
+                {{ grant['type'] }}
+                <br>
+                {{ '{year}年{month}月{day}日'.format(**grant['from']) }}〜{{ '{year}年{month}月{day}日'.format(**grant['to']) }}
+            {% endif %}
+            {% endfor %}
+            </ul>
+          </section>
+          <section>
+            <h1>
+              <span class="en">As Co-Investigator</span>
+              <span class="ja">研究分担者</span>
+            </h1>
+            <ul>
+            {% for grant in data['research grants'] %}
+            {% if grant['principal investigator'] != '谷口 雄太' %}
+              <li>
+                <a href="{{ grant['url'] }}"><span class="title">{{ grant['title'] }}</span></a><br>
+                {{ grant['type'] }}
+                <br>
+                {{ '{year}年{month}月{day}日'.format(**grant['from']) }}〜{{ '{year}年{month}月{day}日'.format(**grant['to']) }}
+                <br>
+                研究代表者: {{ grant['principal investigator']}}
+            {% endif %}
+            {% endfor %}
+            </ul>
+          </section>
+        </section>
+        <section>
+          <h1>学歴</h1>
           <ul>
-          {% for grant in data['research grants'] %}
-          {% if grant['principal investigator'] == '谷口 雄太' %}
+          {% for edu in data['educational background'] %}
+          {% if edu['type'] != 'junior high school' %}
             <li>
-              <a href="{{ grant['url'] }}"><span class="title">{{ grant['title'] }}</span></a><br>
-              {{ grant['type'] }}
+              <span class="title">{{ edu['name'] }}</span>
               <br>
-              {{ '{year}年{month}月{day}日'.format(**grant['from']) }}〜{{ '{year}年{month}月{day}日'.format(**grant['to']) }}
+              {{ '{year}年{month}月'.format(**edu['from']) }}〜{{ '{year}年{month}月'.format(**edu['to']) }}
           {% endif %}
           {% endfor %}
           </ul>
         </section>
         <section>
-          <h1>
-            <span class="en">As Co-Investigator</span>
-            <span class="ja">研究分担者</span>
-          </h1>
+          <h1>学位</h1>
           <ul>
-          {% for grant in data['research grants'] %}
-          {% if grant['principal investigator'] != '谷口 雄太' %}
+          {% for degree in data['academic degrees'] %}
             <li>
-              <a href="{{ grant['url'] }}"><span class="title">{{ grant['title'] }}</span></a><br>
-              {{ grant['type'] }}
+              <span class="title">{{ degree['title'] }}（{{ degree['university'] }}）</span>
               <br>
-              {{ '{year}年{month}月{day}日'.format(**grant['from']) }}〜{{ '{year}年{month}月{day}日'.format(**grant['to']) }}
-              <br>
-              研究代表者: {{ grant['principal investigator']}}
-          {% endif %}
+              {{ '{year}年{month}月'.format(**degree['date']) }}
           {% endfor %}
           </ul>
         </section>
-      </section>
-      <section>
-        <h1>学歴</h1>
-        <ul>
-        {% for edu in data['educational background'] %}
-        {% if edu['type'] != 'junior high school' %}
-          <li>
-            <span class="title">{{ edu['name'] }}</span>
-            <br>
-            {{ '{year}年{month}月'.format(**edu['from']) }}〜{{ '{year}年{month}月'.format(**edu['to']) }}
-        {% endif %}
-        {% endfor %}
-        </ul>
-      </section>
-      <section>
-        <h1>学位</h1>
-        <ul>
-        {% for degree in data['academic degrees'] %}
-          <li>
-            <span class="title">{{ degree['title'] }}（{{ degree['university'] }}）</span>
-            <br>
-            {{ '{year}年{month}月'.format(**degree['date']) }}
-        {% endfor %}
-        </ul>
-      </section>
-      <section>
-        <h1>職歴</h1>
-        <ul>
-        {% for job in data['professional experiences'] %}
-          <li>
-            <span class="title">{{ job['job title'] }}</span>
-            <br>
-            {{ job['organization'] }}
-            <br>
-            {% if job['to'] %}
-            {{ '{year}年{month}月'.format(**job['from']) }}〜{{ '{year}年{month}月'.format(**job['to']) }}
-            {% else %}
-            {{ '{year}年{month}月'.format(**job['from']) }}〜現在
-            {% endif %}
-        {% endfor %}
-        </ul>
-      </section>
-      <section>
-        <h1>Publications</h1>
         <section>
-          <h1>Refereed Book Chapter</h1>
-          <ol style="counter-reset:my-ol-counter {{ data['refereed book chapters']|length + 1 }}">
-          {% for p in data['refereed book chapters'] %}
+          <h1>職歴</h1>
+          <ul>
+          {% for job in data['professional experiences'] %}
             <li>
-              {% if p['doi'] %}
-              <a href="https://doi.org/{{ p['doi'] }}"><span class="title">{{ p['title'] }}</span></a>
-              {% else %}
-              <span class="title">{{ p['title'] }}</span>
-              {% endif %}
+              <span class="title">{{ job['job title'] }}</span>
               <br>
-              {% if p['authors']|length >= 2 %}
-              {{ ', '.join(p['authors'][:-1]) }}, and {{ p['authors'][-1] }}
-              {% else %}
-              {{ p['authors'][0] }}
-              {% endif %}
+              {{ job['organization'] }}
               <br>
-              {{ ', '.join(p['editors']) }}(ed.),
-              {{ p['book'] }},
-              pp.{{ '{}&ndash;{}'.format(*p['pages']) }},
-              {{ p['year'] }},
-              {{ p['publisher'] }}.
+              {% if job['to'] %}
+              {{ '{year}年{month}月'.format(**job['from']) }}〜{{ '{year}年{month}月'.format(**job['to']) }}
+              {% else %}
+              {{ '{year}年{month}月'.format(**job['from']) }}〜現在
+              {% endif %}
           {% endfor %}
+          </ul>
+        </section>
+        <section>
+          <h1>Publications</h1>
+          <section>
+            <h1>Refereed Book Chapter</h1>
+            <ol style="counter-reset:my-ol-counter {{ data['refereed book chapters']|length + 1 }}">
+            {% for p in data['refereed book chapters'] %}
+              <li>
+                {% if p['doi'] %}
+                <a href="https://doi.org/{{ p['doi'] }}"><span class="title">{{ p['title'] }}</span></a>
+                {% else %}
+                <span class="title">{{ p['title'] }}</span>
+                {% endif %}
+                <br>
+                {% if p['authors']|length >= 2 %}
+                {{ ', '.join(p['authors'][:-1]) }}, and {{ p['authors'][-1] }}
+                {% else %}
+                {{ p['authors'][0] }}
+                {% endif %}
+                <br>
+                {{ ', '.join(p['editors']) }}(ed.),
+                {{ p['book'] }},
+                pp.{{ '{}&ndash;{}'.format(*p['pages']) }},
+                {{ p['year'] }},
+                {{ p['publisher'] }}.
+            {% endfor %}
+            </ol>
+          </section>
+          <section>
+            <h1>Refereed Journal Articles</h1>
+            <ol style="counter-reset:my-ol-counter {{ data['refereed journal articles']|length + 1 }}">
+            {% for p in data['refereed journal articles'] %}
+              <li>
+                {% if p['doi'] %}
+                <a href="https://doi.org/{{ p['doi'] }}"><span class="title">{{ p['title'] }}</span></a>
+                {% else %}
+                <span class="title">{{ p['title'] }}</span>
+                {% endif %}
+                <br>
+                {% if p['authors']|length >= 2 %}
+                {{ ', '.join(p['authors'][:-1]) }}, and {{ p['authors'][-1] }}
+                {% else %}
+                {{ p['authors'][0] }}
+                {% endif %}
+                <br>
+                {{ p['journal']['name'] }},
+                Vol.{{ p['journal']['vol'] }},
+                {% if p['journal']['issue'] %}
+                Issue.{{ p['journal']['issue'] }},
+                {% endif %}
+                {% if p['pages'] %}
+                pp.{{ '{}&ndash;{}'.format(*p['pages']) }},
+                {% elif p['page'] %}
+                p.{{ p['page'] }},
+                {% endif %}
+                {{ p['journal']['year'] }}.
+            {% endfor %}
+            </ol>
+          </section>
+          <section>
+            <h1>Refereed Conference Papers</h1>
+            <ol style="counter-reset:my-ol-counter {{ data['refereed conference papers']|length + 1 }}">
+            {% for p in data['refereed conference papers'] %}
+              <li>
+                {% if p['url'] %}
+                <a href="{{ p['url'] }}"><span class="title">{{ p['title'] }}</span></a>
+                {% else %}
+                <span class="title">{{ p['title'] }}</span>
+                {% endif %}
+                <br>
+                {% if p['authors']|length >= 2 %}
+                {{ ', '.join(p['authors'][:-1]) }}, and {{ p['authors'][-1] }}
+                {% else %}
+                {{ p['authors'][0] }}
+                {% endif %}
+                <br>
+                {% if p['proceedings']['name'] %}
+                In {{ p['proceedings']['name'] }}{% if p['conference']['abbrev'] %} ({{ p['conference']['abbrev'] }}){% endif %},
+                {% else %}
+                In Proceedings of {{ p['conference']['name']|regex_sub('^The', 'the') }}{% if p['conference']['abbrev'] %} ({{ p['conference']['abbrev'] }}){% endif %},
+                {% endif %}
+                {% if p['pages'] %}
+                pp.{{ '{}&ndash;{}'.format(*p['pages']) }},
+                {% elif p['page'] %}
+                p.{{ p['page'] }},
+                {% endif %}
+                {{ p['proceedings']['year']}}.
+            {% endfor %}
+            </ol>
+          </section>
+          <section>
+            <h1>Refereed Workshop Papers</h1>
+            <ol style="counter-reset:my-ol-counter {{ data['refereed workshop papers']|length + 1 }}">
+            {% for p in data['refereed workshop papers'] %}
+              <li>
+                {% if p['url'] %}
+                <a href="{{ p['url'] }}"><span class="title">{{ p['title'] }}</span></a>
+                {% else %}
+                <span class="title">{{ p['title'] }}</span>
+                {% endif %}
+                <br>
+                {% if p['authors']|length >= 2 %}
+                {{ ', '.join(p['authors'][:-1]) }}, and {{ p['authors'][-1] }}
+                {% else %}
+                {{ p['authors'][0] }}
+                {% endif %}
+                {% if p['proceedings'] %}
+                <br>
+                {% if p['proceedings']['name'] %}
+                In {{ p['proceedings']['name'] }}{% if p['workshop']['abbrev'] %} ({{ p['workshop']['abbrev'] }}){% endif %},
+                {% else %}
+                In Proceedings of {{ p['workshop']['name']|regex_sub('^The', 'the') }}{% if p['workshop']['abbrev'] %} ({{ p['workshop']['abbrev'] }}){% endif %},
+                {% endif %}
+                {% if p['pages'] %}
+                pp.{{ '{}&ndash;{}'.format(*p['pages']) }},
+                {% elif p['page'] %}
+                p.{{ p['page'] }},
+                {% endif %}
+                {{ p['proceedings']['year']}}.
+                {% endif %}
+            {% endfor %}
+            </ol>
+          </section>
+          <section>
+            <h1>特許</h1>
+            <ol style="counter-reset:my-ol-counter {{ data['patents']|length + 1 }}">
+            {% for p in data['patents'] %}
+              <li>
+                <span class="title">{{ p['title'] }}</span>
+                <br>
+                {% if p['inventors']|length >= 2 %}
+                {{ ', '.join(p['inventors'][:-1]) }}, and {{ p['inventors'][-1] }}
+                {% else %}
+                {{ p['inventors'][0] }}
+                {% endif %}
+                <br>
+                {% if p['publication number'] %}
+                {{ p['publication number'] }}
+                {% else %}
+                {{ p['application number'] }}
+                {% endif %}
+                <br>
+                {% if p['publication date'] %}
+                {{ p['publication date']['year'] }}年
+                {% else %}
+                {{ p['application date']['year'] }}年
+                {% endif %}
+            {% endfor %}
+            </ol>
+          </section>
+          <section>
+            <h1>査読無しワークショップ論文</h1>
+            <ol style="counter-reset:my-ol-counter {{ data['workshop papers']|length + 1 }}">
+            {% for p in data['workshop papers'] %}
+              <li>
+                <span class="title">{{ p['title'] }}</span>
+                <br>
+                {% if p['authors']|length >= 2 %}
+                {{ ', '.join(p['authors'][:-1]) }}, and {{ p['authors'][-1] }}
+                {% else %}
+                {{ p['authors'][0] }}
+                {% endif %}
+                <br>
+                {% if p['proceedings']['name'] %}
+                In {{ p['proceedings']['name'] }}{% if p['workshop']['abbrev'] %} ({{ p['workshop']['abbrev'] }}){% endif %},
+                {% else %}
+                In Proceedings of {{ p['workshop']['name']|regex_sub('^The', 'the') }}{% if p['workshop']['abbrev'] %} ({{ p['workshop']['abbrev'] }}){% endif %},
+                {% endif %}
+                {% if p['pages'] %}
+                pp.{{ '{}&ndash;{}'.format(*p['pages']) }},
+                {% elif p['page'] %}
+                p.{{ p['page'] }},
+                {% endif %}
+                {{ p['proceedings']['year']}}.
+            {% endfor %}
+            </ol>
+          </section>
+          <section>
+            <h1>国内発表</h1>
+            <ol style="counter-reset:my-ol-counter {{ data['domestic presentations']|length + 1 }}">
+            {% for p in data['domestic presentations'] %}
+              <li>
+                <span class="title">{{ p['title'] }}</span>
+                <br>
+                {% if p['authors']|length >= 2 %}
+                {{ ', '.join(p['authors'][:-1]) }}, and {{ p['authors'][-1] }}
+                {% else %}
+                {{ p['authors'][0] }}
+                {% endif %}
+                <br>
+                {{ p['conference'] }}, {{ p['year'] }}.
+            {% endfor %}
+            </ol>
+          </section>
+        </section>
+        <section>
+          <h1>受賞</h1>
+          <ol style="counter-reset:my-ol-counter {{ data['awards']|length + 1 }}">
+            {% for p in data['awards'] %}
+              <li>
+                <span class="title">{{ p['title'] }}</span>
+                <br>
+                {% if p['authors']|length >= 2 %}
+                {{ ', '.join(p['authors'][:-1]) }}, and {{ p['authors'][-1] }}
+                {% else %}
+                {{ p['authors'][0] }}
+                {% endif %}
+                <br>
+                {{ p['conference'] }} {{ p['award'] }}, {{ p['year'] }}.
+            {% endfor %}
           </ol>
         </section>
         <section>
-          <h1>Refereed Journal Articles</h1>
-          <ol style="counter-reset:my-ol-counter {{ data['refereed journal articles']|length + 1 }}">
-          {% for p in data['refereed journal articles'] %}
-            <li>
-              {% if p['doi'] %}
-              <a href="https://doi.org/{{ p['doi'] }}"><span class="title">{{ p['title'] }}</span></a>
-              {% else %}
-              <span class="title">{{ p['title'] }}</span>
+          <h1>教育</h1>
+          <ol style="counter-reset:my-ol-counter {{ data['teaching experiences']|length + 1 }}">
+            {% for p in data['teaching experiences'] %}
+              {% if p['type'] != '担当' and p['type'] != '代講' %}
+              <li>
+                <span class="title">{{ p['title'] }}</span>
+                <br>
+                {{ p['type'] }}
+                <br>
+                {{ p['year'] }}年
               {% endif %}
-              <br>
-              {% if p['authors']|length >= 2 %}
-              {{ ', '.join(p['authors'][:-1]) }}, and {{ p['authors'][-1] }}
-              {% else %}
-              {{ p['authors'][0] }}
-              {% endif %}
-              <br>
-              {{ p['journal']['name'] }},
-              Vol.{{ p['journal']['vol'] }},
-              {% if p['journal']['issue'] %}
-              Issue.{{ p['journal']['issue'] }},
-              {% endif %}
-              {% if p['pages'] %}
-              pp.{{ '{}&ndash;{}'.format(*p['pages']) }},
-              {% elif p['page'] %}
-              p.{{ p['page'] }},
-              {% endif %}
-              {{ p['journal']['year'] }}.
-          {% endfor %}
+            {% endfor %}
           </ol>
         </section>
-        <section>
-          <h1>Refereed Conference Papers</h1>
-          <ol style="counter-reset:my-ol-counter {{ data['refereed conference papers']|length + 1 }}">
-          {% for p in data['refereed conference papers'] %}
-            <li>
-              {% if p['url'] %}
-              <a href="{{ p['url'] }}"><span class="title">{{ p['title'] }}</span></a>
-              {% else %}
-              <span class="title">{{ p['title'] }}</span>
-              {% endif %}
-              <br>
-              {% if p['authors']|length >= 2 %}
-              {{ ', '.join(p['authors'][:-1]) }}, and {{ p['authors'][-1] }}
-              {% else %}
-              {{ p['authors'][0] }}
-              {% endif %}
-              <br>
-              {% if p['proceedings']['name'] %}
-              In {{ p['proceedings']['name'] }}{% if p['conference']['abbrev'] %} ({{ p['conference']['abbrev'] }}){% endif %},
-              {% else %}
-              In Proceedings of {{ p['conference']['name']|regex_sub('^The', 'the') }}{% if p['conference']['abbrev'] %} ({{ p['conference']['abbrev'] }}){% endif %},
-              {% endif %}
-              {% if p['pages'] %}
-              pp.{{ '{}&ndash;{}'.format(*p['pages']) }},
-              {% elif p['page'] %}
-              p.{{ p['page'] }},
-              {% endif %}
-              {{ p['proceedings']['year']}}.
-          {% endfor %}
-          </ol>
-        </section>
-        <section>
-          <h1>Refereed Workshop Papers</h1>
-          <ol style="counter-reset:my-ol-counter {{ data['refereed workshop papers']|length + 1 }}">
-          {% for p in data['refereed workshop papers'] %}
-            <li>
-              {% if p['url'] %}
-              <a href="{{ p['url'] }}"><span class="title">{{ p['title'] }}</span></a>
-              {% else %}
-              <span class="title">{{ p['title'] }}</span>
-              {% endif %}
-              <br>
-              {% if p['authors']|length >= 2 %}
-              {{ ', '.join(p['authors'][:-1]) }}, and {{ p['authors'][-1] }}
-              {% else %}
-              {{ p['authors'][0] }}
-              {% endif %}
-              {% if p['proceedings'] %}
-              <br>
-              {% if p['proceedings']['name'] %}
-              In {{ p['proceedings']['name'] }}{% if p['workshop']['abbrev'] %} ({{ p['workshop']['abbrev'] }}){% endif %},
-              {% else %}
-              In Proceedings of {{ p['workshop']['name']|regex_sub('^The', 'the') }}{% if p['workshop']['abbrev'] %} ({{ p['workshop']['abbrev'] }}){% endif %},
-              {% endif %}
-              {% if p['pages'] %}
-              pp.{{ '{}&ndash;{}'.format(*p['pages']) }},
-              {% elif p['page'] %}
-              p.{{ p['page'] }},
-              {% endif %}
-              {{ p['proceedings']['year']}}.
-              {% endif %}
-          {% endfor %}
-          </ol>
-        </section>
-        <section>
-          <h1>特許</h1>
-          <ol style="counter-reset:my-ol-counter {{ data['patents']|length + 1 }}">
-          {% for p in data['patents'] %}
-            <li>
-              <span class="title">{{ p['title'] }}</span>
-              <br>
-              {% if p['inventors']|length >= 2 %}
-              {{ ', '.join(p['inventors'][:-1]) }}, and {{ p['inventors'][-1] }}
-              {% else %}
-              {{ p['inventors'][0] }}
-              {% endif %}
-              <br>
-              {% if p['publication number'] %}
-              {{ p['publication number'] }}
-              {% else %}
-              {{ p['application number'] }}
-              {% endif %}
-              <br>
-              {% if p['publication date'] %}
-              {{ p['publication date']['year'] }}年
-              {% else %}
-              {{ p['application date']['year'] }}年
-              {% endif %}
-          {% endfor %}
-          </ol>
-        </section>
-        <section>
-          <h1>査読無しワークショップ論文</h1>
-          <ol style="counter-reset:my-ol-counter {{ data['workshop papers']|length + 1 }}">
-          {% for p in data['workshop papers'] %}
-            <li>
-              <span class="title">{{ p['title'] }}</span>
-              <br>
-              {% if p['authors']|length >= 2 %}
-              {{ ', '.join(p['authors'][:-1]) }}, and {{ p['authors'][-1] }}
-              {% else %}
-              {{ p['authors'][0] }}
-              {% endif %}
-              <br>
-              {% if p['proceedings']['name'] %}
-              In {{ p['proceedings']['name'] }}{% if p['workshop']['abbrev'] %} ({{ p['workshop']['abbrev'] }}){% endif %},
-              {% else %}
-              In Proceedings of {{ p['workshop']['name']|regex_sub('^The', 'the') }}{% if p['workshop']['abbrev'] %} ({{ p['workshop']['abbrev'] }}){% endif %},
-              {% endif %}
-              {% if p['pages'] %}
-              pp.{{ '{}&ndash;{}'.format(*p['pages']) }},
-              {% elif p['page'] %}
-              p.{{ p['page'] }},
-              {% endif %}
-              {{ p['proceedings']['year']}}.
-          {% endfor %}
-          </ol>
-        </section>
-        <section>
-          <h1>国内発表</h1>
-          <ol style="counter-reset:my-ol-counter {{ data['domestic presentations']|length + 1 }}">
-          {% for p in data['domestic presentations'] %}
-            <li>
-              <span class="title">{{ p['title'] }}</span>
-              <br>
-              {% if p['authors']|length >= 2 %}
-              {{ ', '.join(p['authors'][:-1]) }}, and {{ p['authors'][-1] }}
-              {% else %}
-              {{ p['authors'][0] }}
-              {% endif %}
-              <br>
-              {{ p['conference'] }}, {{ p['year'] }}.
-          {% endfor %}
-          </ol>
-        </section>
-      </section>
-      <section>
-        <h1>受賞</h1>
-        <ol style="counter-reset:my-ol-counter {{ data['awards']|length + 1 }}">
-          {% for p in data['awards'] %}
-            <li>
-              <span class="title">{{ p['title'] }}</span>
-              <br>
-              {% if p['authors']|length >= 2 %}
-              {{ ', '.join(p['authors'][:-1]) }}, and {{ p['authors'][-1] }}
-              {% else %}
-              {{ p['authors'][0] }}
-              {% endif %}
-              <br>
-              {{ p['conference'] }} {{ p['award'] }}, {{ p['year'] }}.
-          {% endfor %}
-        </ol>
-      </section>
-      <section>
-        <h1>教育</h1>
-        <ol style="counter-reset:my-ol-counter {{ data['teaching experiences']|length + 1 }}">
-          {% for p in data['teaching experiences'] %}
-            {% if p['type'] != '担当' and p['type'] != '代講' %}
-            <li>
-              <span class="title">{{ p['title'] }}</span>
-              <br>
-              {{ p['type'] }}
-              <br>
-              {{ p['year'] }}年
-            {% endif %}
-          {% endfor %}
-        </ol>
-      </section>
-    </div>
-  </section>
-</body>
+      </div>
+    </section>
+  </body>
 
 </html>
