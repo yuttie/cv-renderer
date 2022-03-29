@@ -435,16 +435,16 @@
                 {% endif %}
                 <br>
                 {{ p['journal']['name'] }},
-                Vol.{{ p['journal']['vol'] }},
-                {% if p['journal']['issue'] %}
-                Issue.{{ p['journal']['issue'] }},
+                Vol.{{ p['volume'] }},
+                {% if p['issue'] %}
+                No.{{ p['issue'] }},
                 {% endif %}
                 {% if p['pages'] %}
                 pp.{{ '{}&ndash;{}'.format(*p['pages']) }},
                 {% elif p['page'] %}
                 p.{{ p['page'] }},
                 {% endif %}
-                {{ p['journal']['year'] }}.
+                {{ p['year'] }}.
             {% endfor %}
             </ol>
           </section>
