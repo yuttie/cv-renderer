@@ -621,7 +621,13 @@
                 {{ p['authors'][0] }}
                 {% endif %}
                 <br>
-                {{ p['conference'] }} {{ p['award'] }}, {{ p['year'] }}.
+                {{ p['award'] }}
+                <br>
+                {% if p['year'] %}
+                {{ p['conference'] }}, {{ p['year'] }}.
+                {% else %}
+                {{ p['conference'] }}.
+                {% endif %}
             {% endfor %}
           </ol>
         </section>
