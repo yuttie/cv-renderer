@@ -456,7 +456,7 @@
                 {% elif p['page'] %}
                 p.{{ p['page'] }},
                 {% endif %}
-                {{ p['year'] }}.
+                {{ p['published_at']['year'] }}.
             {% endfor %}
             </ol>
           </section>
