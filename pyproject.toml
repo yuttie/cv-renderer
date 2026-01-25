@@ -1,16 +1,9 @@
-[tool.poetry]
+[project]
 name = "cv-renderer"
 version = "0.1.0"
-description = ""
-authors = ["Yuta Taniguchi <yuta.taniguchi.y.t@gmail.com>"]
-
-[tool.poetry.dependencies]
-python = "^3.7"
-Jinja2 = "^3.0.1"
-PyYAML = "^5.4.1"
-
-[tool.poetry.dev-dependencies]
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+description = "CV renderer for yuttie.info."
+requires-python = ">=3.13"
+dependencies = [
+    "jinja2>=3.1.6",
+    "pyyaml>=6.0.3",
+]
