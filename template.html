@@ -523,36 +523,6 @@
           </section>
           <section>
             <h1>
-              <span class="en">Unrefereed Workshop Papers</span>
-              <span class="ja">査読無しワークショップ論文</span>
-            </h1>
-            <ol style="counter-reset:my-ol-counter {{ data['workshop papers']|length + 1 }}">
-            {% for p in data['workshop papers'] %}
-              <li>
-                <span class="title">{{ p['title'] }}</span>
-                <br>
-                {% if p['authors']|length >= 2 %}
-                {{ ', '.join(p['authors'][:-1]) }}, and {{ p['authors'][-1] }}
-                {% else %}
-                {{ p['authors'][0] }}
-                {% endif %}
-                <br>
-                {% if p['proceedings']['name'] %}
-                In {{ p['proceedings']['name'] }}{% if p['workshop']['abbrev'] %} ({{ p['workshop']['abbrev'] }}){% endif %},
-                {% else %}
-                In Proceedings of {{ p['workshop']['name']|regex_sub('^The', 'the') }}{% if p['workshop']['abbrev'] %} ({{ p['workshop']['abbrev'] }}){% endif %},
-                {% endif %}
-                {% if p['pages'] %}
-                pp.{{ '{}&ndash;{}'.format(*p['pages']) }},
-                {% elif p['page'] %}
-                p.{{ p['page'] }},
-                {% endif %}
-                {{ p['proceedings']['year']}}.
-            {% endfor %}
-            </ol>
-          </section>
-          <section>
-            <h1>
               <span class="en">Domestic Presentations</span>
               <span class="ja">国内発表</span>
             </h1>
