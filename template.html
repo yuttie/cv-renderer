@@ -473,9 +473,11 @@
                 {% endif %}
                 <br>
                 {% if p['proceedings']['name'] %}
-                In {{ p['proceedings']['name'] }}{% if p['conference']['abbrev'] %} ({{ p['conference']['abbrev'] }}){% endif %},
+                In {{ p['proceedings']['name'] }}{% if p['conference']['abbrev'] %} ({{ p['conference']['abbrev'] }} {{ p['conference']['year'] }}){% endif %},
+                {% elif p['workshop'] %}
+                In Proceedings of {{ p['workshop']['name']|regex_sub('^The', 'the') }}{% if p['workshop']['abbrev'] %} ({{ p['workshop']['abbrev'] }} {{ p['workshop']['year'] }}){% endif %} ({{ p['conference']['name']|regex_sub('^The', 'the') }}{% if p['conference']['abbrev'] %} ({{ p['conference']['abbrev'] }} {{ p['conference']['year'] }}){% endif %}),
                 {% else %}
-                In Proceedings of {{ p['conference']['name']|regex_sub('^The', 'the') }}{% if p['conference']['abbrev'] %} ({{ p['conference']['abbrev'] }}){% endif %},
+                In Proceedings of {{ p['conference']['name']|regex_sub('^The', 'the') }}{% if p['conference']['abbrev'] %} ({{ p['conference']['abbrev'] }} {{ p['conference']['year'] }}){% endif %},
                 {% endif %}
                 {% if p['pages'] %}
                 pp.{{ '{}&ndash;{}'.format(*p['pages']) }},
@@ -483,39 +485,6 @@
                 p.{{ p['page'] }},
                 {% endif %}
                 {{ p['proceedings']['year']}}.
-            {% endfor %}
-            </ol>
-          </section>
-          <section>
-            <h1>Refereed Workshop Papers</h1>
-            <ol style="counter-reset:my-ol-counter {{ data['refereed workshop papers']|length + 1 }}">
-            {% for p in data['refereed workshop papers'] %}
-              <li>
-                {% if p['url'] %}
-                <a href="{{ p['url'] }}"><span class="title">{{ p['title'] }}</span></a>
-                {% else %}
-                <span class="title">{{ p['title'] }}</span>
-                {% endif %}
-                <br>
-                {% if p['authors']|length >= 2 %}
-                {{ ', '.join(p['authors'][:-1]) }}, and {{ p['authors'][-1] }}
-                {% else %}
-                {{ p['authors'][0] }}
-                {% endif %}
-                {% if p['proceedings'] %}
-                <br>
-                {% if p['proceedings']['name'] %}
-                In {{ p['proceedings']['name'] }}{% if p['workshop']['abbrev'] %} ({{ p['workshop']['abbrev'] }}){% endif %},
-                {% else %}
-                In Proceedings of {{ p['workshop']['name']|regex_sub('^The', 'the') }}{% if p['workshop']['abbrev'] %} ({{ p['workshop']['abbrev'] }}){% endif %},
-                {% endif %}
-                {% if p['pages'] %}
-                pp.{{ '{}&ndash;{}'.format(*p['pages']) }},
-                {% elif p['page'] %}
-                p.{{ p['page'] }},
-                {% endif %}
-                {{ p['proceedings']['year']}}.
-                {% endif %}
             {% endfor %}
             </ol>
           </section>
