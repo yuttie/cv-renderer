@@ -410,11 +410,7 @@
                 <span class="title">{{ p['title'] }}</span>
                 {% endif %}
                 <br>
-                {% if p['authors']|length >= 2 %}
-                {{ ', '.join(p['authors'][:-1]) }}, and {{ p['authors'][-1] }}
-                {% else %}
-                {{ p['authors'][0] }}
-                {% endif %}
+                {{ ', '.join(p['authors']) }}
                 <br>
                 {{ ', '.join(p['editors']) }}(ed.),
                 {{ p['book'] }},
@@ -435,11 +431,7 @@
                 <span class="title">{{ p['title'] }}</span>
                 {% endif %}
                 <br>
-                {% if p['authors']|length >= 2 %}
-                {{ ', '.join(p['authors'][:-1]) }}, and {{ p['authors'][-1] }}
-                {% else %}
-                {{ p['authors'][0] }}
-                {% endif %}
+                {{ ', '.join(p['authors']) }}
                 <br>
                 {{ p['journal']['name'] }},
                 Vol.{{ p['volume'] }},
@@ -469,11 +461,7 @@
                 <a href="{{ p['pdf_url'] }}">[pdf]</a>
                 {% endif %}
                 <br>
-                {% if p['authors']|length >= 2 %}
-                {{ ', '.join(p['authors'][:-1]) }}, and {{ p['authors'][-1] }}
-                {% else %}
-                {{ p['authors'][0] }}
-                {% endif %}
+                {{ ', '.join(p['authors']) }}
                 <br>
                 {% if p['proceedings']['name'] %}
                 In {{ p['proceedings']['name'] }}{% if p['conference']['abbrev'] %} ({{ p['conference']['abbrev'] }} {{ p['conference']['year'] }}){% endif %},
@@ -501,11 +489,7 @@
               <li>
                 <span class="title">{{ p['title'] }}</span>
                 <br>
-                {% if p['inventors']|length >= 2 %}
-                {{ ', '.join(p['inventors'][:-1]) }}, and {{ p['inventors'][-1] }}
-                {% else %}
-                {{ p['inventors'][0] }}
-                {% endif %}
+                {{ ', '.join(p['inventors']) }}
                 <br>
                 {% if p['publication number'] %}
                 {{ p['publication number'] }}
@@ -531,11 +515,7 @@
               <li>
                 <span class="title">{{ p['title'] }}</span>
                 <br>
-                {% if p['authors']|length >= 2 %}
-                {{ ', '.join(p['authors'][:-1]) }}, and {{ p['authors'][-1] }}
-                {% else %}
-                {{ p['authors'][0] }}
-                {% endif %}
+                {{ ', '.join(p['authors']) }}
                 <br>
                 {{ p['conference'] }}, {{ p['year'] }}.
             {% endfor %}
@@ -552,11 +532,7 @@
               <li>
                 <span class="title">{{ p['title'] }}</span>
                 <br>
-                {% if p['authors']|length >= 2 %}
-                {{ ', '.join(p['authors'][:-1]) }}, and {{ p['authors'][-1] }}
-                {% else %}
-                {{ p['authors'][0] }}
-                {% endif %}
+                {{ ', '.join(p['authors']) }}
                 <br>
                 {{ p['award'] }}
                 <br>
