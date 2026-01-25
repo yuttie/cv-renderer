@@ -353,7 +353,7 @@
             <span class="ja">学歴</span>
           </h1>
           <ul>
-          {% for edu in data['educational background'] %}
+          {% for edu in data['educational background'][::-1] %}
           {% if edu['type'] != 'junior high school' %}
             <li>
               <span class="title">{{ edu['name'] }}</span>
@@ -369,7 +369,7 @@
             <span class="ja">学位</span>
           </h1>
           <ul>
-          {% for degree in data['academic degrees'] %}
+          {% for degree in data['academic degrees'][::-1] %}
             <li>
               <span class="title">{{ degree['title'] }}（{{ degree['university'] }}）</span>
               <br>
@@ -383,7 +383,7 @@
             <span class="ja">職歴</span>
           </h1>
           <ul>
-          {% for job in data['professional experiences'] %}
+          {% for job in data['professional experiences'][::-1] %}
             <li>
               <span class="title">{{ job['job_title'] }}</span>
               <br>
