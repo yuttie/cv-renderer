@@ -461,9 +461,12 @@
             {% for p in data['refereed conference papers'] %}
               <li>
                 {% if p['url'] %}
-                <a href="{{ p['url'] }}"><span class="title">{{ p['title'] }}</span></a>
+                <span class="title"><a href="{{ p['url'] }}">{{ p['title'] }}</a></span>
                 {% else %}
                 <span class="title">{{ p['title'] }}</span>
+                {% endif %}
+                {% if p['pdf_url'] %}
+                <a href="{{ p['pdf_url'] }}">[pdf]</a>
                 {% endif %}
                 <br>
                 {% if p['authors']|length >= 2 %}
